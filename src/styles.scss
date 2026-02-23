@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #11071f;
+}
+
+.lottie-animation {
+  width: 550px;
+  height: 550px;
+  display: block;
+  margin: auto;
+}
+
+.text {
+  text-align: left;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+
+  p:first-child {
+    font-size: 42px;
+    color: #a78bfa;
+  }
+
+  p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #cfcfcf;
+
+    strong {
+      color: #a78bfa;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  backdrop-filter: blur(12px);
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 40px;
+}
+
+.scroll-container {
+  height: calc(100vh - 75px);
+  overflow-y: auto;
+
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #763cac;
+  --sb-size: 13px;
+
+  &::-webkit-scrollbar {
+    width: var(--sb-size);
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .scroll-container {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .scroll-container {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

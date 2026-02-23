@@ -1,0 +1,28 @@
+<section id="stacks">
+  <div class="section-wrapper">
+    <div class="container">
+      <div class="text">
+        <p>Stacks</p>
+      </div>
+      <div class="card-grid">
+        @for (item of stacks; track item.Nome) {
+          <div
+            class="card"
+            [class.flipped]="item.flipped"
+            (click)="flipCard(item)"
+          >
+            <div class="card-inner">
+              <div class="card-front">
+                <img [src]="item.Imagem" [alt]="item.Nome" />
+                <p>{{ item.Nome }}</p>
+              </div>
+              <div class="card-back">
+                <p>{{ item.descricao }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

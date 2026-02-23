@@ -1,0 +1,46 @@
+<section id="projetos">
+  <div class="container">
+    <div
+      class="card"
+      [class.flipped]="projetoAtivo.flipped"
+      (click)="flipCard()"
+    >
+      <div class="card-inner">
+        <div class="card-front">
+          <img [src]="projetoAtivo.imagem" [alt]="projetoAtivo.nome" />
+        </div>
+
+        <div class="card-back">
+          <div class="back-content">
+            <p class="nome-projeto">{{ projetoAtivo.nome }}</p>
+
+            <p class="descricao">
+              {{ projetoAtivo.descricao }}
+            </p>
+
+            <div class="tech-list">
+              @for (tech of projetoAtivo.tecnologias.split(","); track tech) {
+                <span class="tech-badge">
+                  {{ tech.trim() }}
+                </span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <p>Projetos</p>
+
+      @for (item of projetos; track item.nome) {
+        <div
+          class="projeto-item"
+          (click)="selecionarProjeto(item)"
+          [class.ativo]="item === projetoAtivo"
+        >
+          <p>{{ item.nome }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

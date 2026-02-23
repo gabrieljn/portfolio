@@ -1,0 +1,47 @@
+.section-wrapper {
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .image {
+    display: none;
+  }
+
+  .text p:first-child {
+    font-size: 30px;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .text p {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .text p:first-child {
+    font-size: 42px;
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  .text p {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .image {
+    display: none;
+  }
+}

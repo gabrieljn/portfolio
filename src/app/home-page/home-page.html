@@ -1,0 +1,49 @@
+<header class="header">
+  <div class="logo">Gabriel.dev</div>
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav [class.open]="menuOpen">
+    <a href="#home" (click)="toggleMenu()">Home</a>
+    <a href="#stacks" (click)="toggleMenu()">Stacks</a>
+    <a href="#services" (click)="toggleMenu()">Services</a>
+    <a href="#projects" (click)="toggleMenu()">Projects</a>
+    <a href="#contact" (click)="toggleMenu()">Contact</a>
+  </nav>
+</header>
+<main class="scroll-container">
+  <section id="home">
+    <div class="container">
+      <div class="hero">
+        <div class="image">
+          <img
+            src="https://avatars.githubusercontent.com/u/86156987?v=4"
+            alt="Foto de perfil"
+          />
+        </div>
+
+        <div class="text">
+          <p>Gabriel Nascimento Alves</p>
+          <p>Desenvolvedor Web Full Stack</p>
+        </div>
+      </div>
+      <section id="about" class="about-section">
+        <app-about></app-about>
+      </section>
+    </div>
+  </section>
+  <section id="stacks" class="stacks-section">
+    <app-stacks></app-stacks>
+  </section>
+    <section id="services" class="services-section">
+    <app-services></app-services>
+  </section>
+    <section id="projects" class="projects-section">
+    <app-projects></app-projects>
+  </section>
+    <section id="contact" class="contact-section">
+    <app-contact></app-contact>
+  </section>
+</main>
