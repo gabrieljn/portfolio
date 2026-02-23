@@ -73,6 +73,7 @@ nav a:hover {
     font-weight: 700;
     animation: brushReveal 1.5s ease forwards;
     animation-delay: 0.5s;
+    animation-fill-mode: both;
   }
 
   p:last-child {
@@ -81,6 +82,7 @@ nav a:hover {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     animation: brushReveal 1.5s ease forwards;
     animation-delay: 2s;
+    animation-fill-mode: both;
   }
 }
 
